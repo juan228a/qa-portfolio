@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Juan Martín Ruiz | QA Junior (Manual & Cypress)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio de Juan Martín Ruiz - QA Junior: testing manual, automatización E2E con Cypress + JavaScript y API testing con Postman."
+    />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6366f1",
+              secondary: "#22c55e",
+              dark: "#020617",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-slate-950 text-slate-100">
+    <!-- Fondo -->
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-br from-primary/25 via-slate-900 to-secondary/25 opacity-90"
+    ></div>
+
+    <!-- NAVBAR -->
+    <header
+      class="sticky top-0 z-20 border-b border-white/5 bg-slate-950/80 backdrop-blur-md"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3"
+      >
+        <div class="flex items-center gap-2">
+          <div
+            class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-lg font-bold"
+          >
+            JM
+          </div>
+          <div class="leading-tight">
+            <p class="text-sm font-semibold">Juan Martín Ruiz</p>
+            <p class="text-xs text-slate-400">
+              QA Junior · Manual + Cypress · API Testing
+            </p>
+          </div>
+        </div>
+
+        <div class="hidden gap-6 text-sm md:flex">
+          <a href="#about" class="hover:text-primary transition-colors"
+            >Sobre mí</a
+          >
+          <a href="#skills" class="hover:text-primary transition-colors"
+            >Skills</a
+          >
+          <a href="#projects-qa" class="hover:text-primary transition-colors"
+            >Proyectos QA</a
+          >
+          <a href="#projects-fe" class="hover:text-primary transition-colors"
+            >Frontend</a
+          >
+          <a href="#services" class="hover:text-primary transition-colors"
+            >  Aporte al equipo QA</a
+          >
+          <a href="#contact" class="hover:text-primary transition-colors"
+            >Contacto</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-4">
+      <!-- HERO -->
+      <section
+        class="flex flex-col items-start gap-10 py-14 md:flex-row md:items-center md:py-20"
+      >
+        <div class="flex-1">
+          <p
+            class="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-primary"
+          >
+            QA Junior · Manual + Cypress · API Testing
+
+          </p>
+          <h1
+            class="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl"
+          >
+            Aseguro calidad, automatizo pruebas<br class="hidden md:block" />
+            y ayudo a que los productos salgan mejor.
+          </h1>
+          <p class="mb-6 max-w-xl text-sm text-slate-300 sm:text-base">
+            Soy <span class="font-semibold">Juan Martín Ruiz</span>, Técnico Universitario en Desarrollo y Calidad de Software (UNSTA),
+    enfocado en <span class="font-semibold">QA Manual</span> y
+    <span class="font-semibold">automatización E2E con Cypress + JavaScript</span>.
+    También realizo <span class="font-semibold">pruebas de APIs con Postman (REST y SOAP)</span>
+    y reporto bugs con evidencia clara (pasos, severidad/prioridad y resultados esperados vs. actuales).
+    Busco mi primera experiencia IT como QA Junior.
+          </p>
+
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="#projects-qa"
+              class="rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-primary/40 transition hover:bg-indigo-500"
+            >
+              Ver proyectos QA
+            </a>
+
+            <a
+              href="#contact"
+              class="rounded-full border border-slate-600 px-5 py-2.5 text-sm font-medium text-slate-100 transition hover:border-primary hover:text-primary"
+            >
+              Contactarme
+            </a>
+
+            <a
+              href="JuanMartinRuiz_Cv_QA.pdf"
+              target="_blank"
+              class="rounded-full border border-emerald-500/80 px-5 py-2.5 text-sm font-medium text-emerald-300 transition hover:bg-emerald-500/10"
+            >
+              Ver / descargar CV
+            </a>
+          </div>
+
+          <div
+            class="mt-6 flex flex-wrap items-center gap-3 text-xs text-slate-400"
+          >
+            <span class="rounded-full border border-slate-700 px-3 py-1"
+              >#QA Manual</span
+            >
+            <span class="rounded-full border border-slate-700 px-3 py-1"
+              >#Cypress</span
+            >
+            <span class="rounded-full border border-slate-700 px-3 py-1"
+              >#JavaScript</span
+            >
+            <span class="rounded-full border border-slate-700 px-3 py-1"
+              >#Frontend</span
+            >
+            <span class="rounded-full border border-slate-700 px-3 py-1"
+              >#Scrum</span
+            >
+          </div>
+        </div>
+
+        <!-- TARJETA PERFIL -->
+        <div class="mt-6 flex-1 md:mt-0 md:flex md:justify-end">
+          <div
+            class="relative w-full max-w-sm overflow-hidden rounded-3xl border border-white/5 bg-slate-900/70 p-5 shadow-2xl"
+          >
+            <div
+              class="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/25 blur-3xl"
+            ></div>
+            <p class="mb-3 text-xs font-semibold uppercase text-slate-400">
+              Perfil rápido
+            </p>
+            <ul class="space-y-2 text-sm text-slate-200">
+              <li>
+                <span class="text-slate-400">Nombre:</span> Juan Martín Ruiz
+              </li>
+              <li>
+                <span class="text-slate-400">Rol:</span>
+                QA Junior (Manual + Cypress)
+              </li>
+              <li>
+                <span class="text-slate-400">Metodologías:</span> Agile / Scrum
+              </li>
+              <li>
+                <span class="text-slate-400">Stack QA:</span>
+               Cypress, JavaScript, Postman, Chrome DevTools, testing funcional y reporte de bugs
+              </li>
+              <li>
+                <span class="text-slate-400">Stack Frontend:</span>
+                HTML, CSS, JavaScript
+              </li>
+              <li>
+                <span class="text-slate-400">Objetivo:</span>
+                Primera experiencia IT + proyectos freelance
+              </li>
+            </ul>
+            <div
+              class="mt-4 rounded-2xl bg-slate-800/80 p-3 text-xs text-slate-300"
+            >
+              “Me gusta encontrar problemas antes de que lleguen al usuario y
+              dejar todo documentado para que el equipo pueda resolver rápido y
+              con claridad.”
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE MI -->
+      <section id="about" class="py-10 scroll-mt-24">
+        <h2 class="mb-3 text-xl font-semibold sm:text-2xl">Sobre mí</h2>
+        <p class="max-w-3xl text-sm text-slate-300 sm:text-base">
+          Soy técnico en calidad y desarrollo de software. A lo largo del último
+          año me enfoqué en <span class="font-semibold">testing manual</span>,
+          <span class="font-semibold">JavaScript</span> y actualmente en
+          <span class="font-semibold">Cypress</span> para empezar a automatizar
+          flujos clave. Vengo del lado de la calidad, pero entiendo también la
+          parte técnica del frontend, lo que me ayuda a comunicarme mejor con
+          desarrolladores y a pensar pruebas más completas.
+        </p>
+        <p class="mt-3 max-w-3xl text-sm text-slate-300 sm:text-base">
+          Conozco conceptos de
+          <span class="font-semibold">Scrum</span> (sprints, dailies, backlog,
+          definición de terminado) y me siento cómodo trabajando de forma
+          iterativa, priorizando feedback y entregas constantes. Busco un
+          entorno donde pueda seguir aprendiendo, aportar valor desde el primer
+          día y crecer como QA Automation a mediano plazo.
+        </p>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="py-10 scroll-mt-24">
+        <h2 class="mb-5 text-xl font-semibold sm:text-2xl">Skills</h2>
+        <div class="grid gap-5 md:grid-cols-4">
+          <!-- QA Manual -->
+          <div
+            class="rounded-2xl border border-white/5 bg-slate-900/70 p-4 shadow-lg shadow-slate-900/40"
+          >
+            <h3 class="mb-2 text-xs font-semibold uppercase text-slate-300">
+              QA Manual
+            </h3>
+            <ul class="space-y-1 text-sm text-slate-300">
+              <li>Diseño y ejecución de casos de prueba</li>
+              <li>Pruebas funcionales, de regresión y smoke</li>
+              <li>Pruebas positivas y negativas</li>
+              <li>Reporte de bugs con pasos y evidencia</li>
+            </ul>
+          </div>
+
+          <!-- Automation -->
+          <div
+            class="rounded-2xl border border-white/5 bg-slate-900/70 p-4 shadow-lg shadow-indigo-900/40"
+          >
+            <h3 class="mb-2 text-xs font-semibold uppercase text-slate-300">
+              QA Automation (Cypress)
+            </h3>
+            <ul class="space-y-1 text-sm text-slate-300">
+              <li>Cypress con JavaScript</li>
+              <li>Hooks: beforeEach, after</li>
+              <li>Fixtures (JSON) y custom commands</li>
+              <li>E2E + cy.request (API)</li>
+            </ul>
+          </div>
+
+          <!-- Frontend -->
+          <div
+            class="rounded-2xl border border-white/5 bg-slate-900/70 p-4 shadow-lg shadow-emerald-900/40"
+          >
+            <h3 class="mb-2 text-xs font-semibold uppercase text-slate-300">
+              Frontend
+            </h3>
+            <ul class="space-y-1 text-sm text-slate-300">
+              <li>HTML, CSS, JavaScript</li>
+              <li>Responsive design y maquetado</li>
+              <li>Uso de Chrome DevTools</li>
+              <li>Git & GitHub</li>
+            </ul>
+          </div>
+
+          <!-- Scrum / Herramientas -->
+          <div
+            class="rounded-2xl border border-white/5 bg-slate-900/70 p-4 shadow-lg shadow-slate-900/40"
+          >
+            <h3 class="mb-2 text-xs font-semibold uppercase text-slate-300">
+              Metodología & Herramientas
+            </h3>
+            <ul class="space-y-1 text-sm text-slate-300">
+              <li>Conceptos de Agile / Scrum</li>
+              <li>Manejo básico de Jira / Trello</li>
+              <li>Markdown / Google Docs</li>
+              <li>Comunicación clara con el equipo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROYECTOS QA -->
+      <section id="projects-qa" class="py-10 scroll-mt-24">
+        <h2 class="mb-5 text-xl font-semibold sm:text-2xl">Proyectos QA</h2>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <!-- Proyecto QA 1 -->
+        <article
+  class="group flex flex-col justify-between rounded-2xl border border-white/5 bg-slate-900/80 p-4 transition hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/30"
+>
+  <div>
+    <h3 class="mb-1 text-lg font-semibold">
+      Testing Manual – Formulario DemoQA
+    </h3>
+
+    <p class="mb-2 text-sm text-slate-300">
+      Proyecto de testing manual realizado sobre el formulario “Text Box” de 
+      DemoQA. Incluye casos de prueba funcionales para validar datos válidos 
+      e inválidos, comportamiento de campos, validación de emails y pruebas 
+      responsive en mobile. Además, se documentaron bugs reales con pasos para 
+      reproducirlos, severidad, prioridad y evidencia visual.
+    </p>
+
+    <ul class="mb-3 text-xs text-slate-400 space-y-1">
+      <li>• 5 casos de prueba (1 fallido) (TC-001 a TC-005)</li>
+      <li>• Validaciones positivas y negativas</li>
+      <li>• Testing responsive en mobile</li>
+      <li>• 1 bug real documentado</li>
+      <li>• Evidencias con capturas de pantalla</li>
+    </ul>
+  </div>
+
+  <div class="mt-2 flex gap-2 text-xs">
+    <span class="rounded-full bg-slate-800 px-3 py-1 text-slate-300">
+      QA Manual
+    </span>
+    <span class="rounded-full bg-slate-800 px-3 py-1 text-slate-300">
+      Casos de Prueba
+    </span>
+    <a
+      href="Testing_Manual_DemoQA_JuanMartinRuiz.pdf"
+      target="_blank"
+      class="rounded-full bg-primary/20 px-3 py-1 text-primary hover:bg-primary/30"
+    >
+      PDF
+    </a>
+  </div>
+</article>
+
+
+          <!-- Proyecto QA 2 -->
+        <article
+  class="group flex flex-col justify-between rounded-2xl border border-white/5 bg-slate-900/80 p-4 transition hover:-translate-y-1 hover:border-primary/60 hover:shadow-xl hover:shadow-primary/30"
+>
+  <div>
+    <h3 class="mb-1 text-lg font-semibold">
+      Cypress – Automatización Login & Navegación (OrangeHRM)
+    </h3>
+
+    <p class="mb-2 text-sm text-slate-300">
+      Proyecto de automatización realizado con Cypress sobre la demo oficial de 
+      OrangeHRM. Se automatizaron flujos de login, navegación entre módulos y 
+      validaciones básicas de interfaz. El proyecto utiliza buenas prácticas como 
+      <code>beforeEach</code> para preparar el estado inicial y <code>after</code> 
+      para finalizar sesión, garantizando independencia entre tests.
+    </p>
+
+    <ul class="mb-3 text-xs text-slate-400 space-y-1">
+      <li>• Automatización de login con credenciales válidas</li>
+      <li>• Navegación por diferentes secciones del sistema</li>
+      <li>• Uso de hooks (beforeEach, after) para manejar estado</li>
+      <li>• Selectores CSS y selectores XPath (cypress-xpath)</li>
+      <li>• Tests independientes y reproducibles</li>
+      <li>• Preparado para escalar a Page Object Model</li>
+    </ul>
+  </div>
+
+  <div class="mt-2 flex gap-2 text-xs">
+    <span class="rounded-full bg-slate-800 px-3 py-1 text-slate-300">
+      Cypress
+    </span>
+    <span class="rounded-full bg-slate-800 px-3 py-1 text-slate-300">
+      JavaScript
+    </span>
+    <a
+      href="https://github.com/juan228a/cypress-orangehrm-automation"
+      target="_blank"
+      class="rounded-full bg-primary/20 px-3 py-1 text-primary hover:bg-primary/30"
+    >
+      Repositorio
+    </a>
+  </div>
+</article>
+
+        </div>
+      </section>
+
+      <!-- PROYECTOS FRONTEND -->
+      <section id="projects-fe" class="py-10 scroll-mt-24">
+        <h2 class="mb-5 text-xl font-semibold sm:text-2xl">
+          Proyectos Frontend
+        </h2>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <!-- FE 1 -->
+         <article
+  class="group flex flex-col justify-between rounded-2xl border border-white/5 bg-slate-900/80 p-4 transition hover:-translate-y-1 hover:border-secondary/60 hover:shadow-xl hover:shadow-secondary/30"
+>
+  <div>
+    <h3 class="mb-1 text-lg font-semibold">PREST-AR – Marketplace de herramientas</h3>
+
+    <p class="mb-2 text-sm text-slate-300">
+      Plataforma web desarrollada como proyecto final. Permite a los usuarios 
+      registrarse, publicar herramientas, editarlas, eliminarlas y alquilar 
+      herramientas de otros usuarios. La versión original cuenta con backend, 
+      autenticación y base de datos completa, mientras que en Netlify se muestra 
+      el frontend por limitaciones del hosting.
+    </p>
+
+    <ul class="mb-3 text-xs text-slate-400 space-y-1">
+      <li>• Registro e inicio de sesión de usuarios</li>
+      <li>• Publicación, edición y eliminación de herramientas (CRUD)</li>
+      <li>• Administración de usuarios</li>
+      <li>• Interfaz responsive y orientada al usuario</li>
+      <li>• Trabajo en equipo bajo prácticas Agile/Scrum</li>
+    </ul>
+  </div>
+
+  <div class="mt-2 flex gap-2 text-xs">
+    <span class="rounded-full bg-slate-800 px-3 py-1 text-slate-300">
+      HTML / CSS / JS
+    </span>
+
+    <a
+      href="https://prest-ar.netlify.app/"
+      target="_blank"
+      class="rounded-full bg-secondary/20 px-3 py-1 text-secondary hover:bg-secondary/30"
+      >Ver demo</a
+    >
+  </div>
+</article>
+
+
+          <!-- FE 2 -->
+     <article
+  class="group flex flex-col justify-between rounded-2xl border border-white/5 bg-slate-900/80 p-4 transition hover:-translate-y-1 hover:border-secondary/60 hover:shadow-xl hover:shadow-secondary/30"
+>
+  <div>
+    <h3 class="mb-1 text-lg font-semibold">
+      Card UI – Componente de Tarjeta Responsive
+    </h3>
+
+    <p class="mb-2 text-sm text-slate-300">
+      Componente visual desarrollado con HTML y CSS para practicar maquetado,
+      diseño moderno, organización de contenido y creación de elementos
+      reutilizables. Incluye imagen, título, descripción y un botón de acción.
+    </p>
+
+    <ul class="mb-3 text-xs text-slate-400 space-y-1">
+      <li>• Componente 100% reusable para interfaces</li>
+      <li>• Diseño limpio, minimalista y centrado en UI</li>
+      <li>• Imagen, texto y botón totalmente integrados</li>
+      <li>• Sombra, bordes y espaciados trabajados en CSS</li>
+      <li>• Ideal para practicar testing visual y responsive</li>
+    </ul>
+  </div>
+
+  <div class="mt-2 flex gap-2 text-xs">
+    <span
+      class="rounded-full bg-slate-800 px-3 py-1 text-slate-300"
+      >HTML / CSS</span
+    >
+    <a
+      href="https://previstatarjeta.netlify.app"
+      target="_blank"
+      class="rounded-full bg-secondary/20 px-3 py-1 text-secondary hover:bg-secondary/30"
+      >Ver demo</a
+    >
+  </div>
+</article>
+
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section id="services" class="py-10 scroll-mt-24">
+        <h2 class="mb-5 text-xl font-semibold sm:text-2xl">
+          ¿Qué puedo aportar a un equipo QA?
+        </h2>
+        <div class="grid gap-5 md:grid-cols-3">
+          <div
+            class="rounded-2xl border border-white/5 bg-slate-900/80 p-4 text-sm text-slate-300"
+          >
+            <h3 class="mb-2 text-xs font-semibold uppercase text-slate-200">
+              QA Manual para sitios web
+            </h3>
+            <p class="mb-2">
+              Revisión funcional de tu sitio: formularios, navegación, flujos
+              clave y comportamiento en desktop y mobile.
+            </p>
+            <ul class="space-y-1 text-xs text-slate-400">
+              <li>• Casos de prueba claros</li>
+              <li>• Reporte de bugs priorizado</li>
+              <li>• Recomendaciones de mejora</li>
+            </ul>
+          </div>
+
+          <div
+            class="rounded-2xl border border-white/5 bg-slate-900/80 p-4 text-sm text-slate-300"
+          >
+            <h3 class="mb-2 text-xs font-semibold uppercase text-slate-200">
+              Testing de formularios & flujos
+            </h3>
+            <p class="mb-2">
+              Pruebas específicas sobre formularios de registro, login, checkout
+              y contacto, asegurando que el usuario pueda completar sus tareas
+              sin fricciones.
+            </p>
+            <ul class="space-y-1 text-xs text-slate-400">
+              <li>• Casos positivos y negativos</li>
+              <li>• Validaciones y errores de negocio</li>
+              <li>• Feedback sobre UX y claridad de mensajes</li>
+            </ul>
+          </div>
+
+          <div
+            class="rounded-2xl border border-white/5 bg-slate-900/80 p-4 text-sm text-slate-300"
+          >
+            <h3 class="mb-2 text-xs font-semibold uppercase text-slate-200">
+              Automatización inicial con Cypress
+            </h3>
+            <p class="mb-2">
+              Creación de scripts iniciales con Cypress para automatizar flujos
+              básicos como login, navegación y validaciones simples.
+            </p>
+            <ul class="space-y-1 text-xs text-slate-400">
+              <li>• Setup básico de proyecto</li>
+              <li>• Tests E2E para flujos clave</li>
+              <li>• Documentación para escalar la suite</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contact" class="py-16 scroll-mt-24">
+        <h2 class="mb-3 text-xl font-semibold sm:text-2xl">Contacto</h2>
+        <p class="mb-6 max-w-xl text-sm text-slate-300 sm:text-base">
+          Si estás buscando un perfil junior de QA con base técnica en frontend
+          y ganas de aprender, o necesitás que alguien revise tu sitio o
+          aplicación, podés contactarme por estos medios o enviarme un mensaje
+          directo:
+        </p>
+
+        <!-- Botones -->
+        <div class="mb-6 flex flex-wrap gap-3 text-sm">
+          <a
+            href="mailto:ruizjuanmartin46@gmail.com"
+            class="rounded-full bg-primary px-4 py-2 font-medium text-white shadow-md hover:bg-indigo-500"
+            >Enviar email</a
+          >
+
+          <a
+            href="https://www.linkedin.com/in/ruizjuanmartin"
+            target="_blank"
+            class="rounded-full border border-slate-600 px-4 py-2 font-medium text-slate-100 hover:border-primary hover:text-primary"
+            >LinkedIn</a
+          >
+
+          <a
+            href="https://github.com/juan228a"
+            target="_blank"
+            class="rounded-full border border-slate-600 px-4 py-2 font-medium text-slate-100 hover:border-primary hover:text-primary"
+            >GitHub</a
+          >
+
+          <a
+            href="JuanMartinRuiz_Cv_QA.pdf"
+            target="_blank"
+            class="rounded-full border border-emerald-500/80 px-4 py-2 font-medium text-emerald-300 hover:bg-emerald-500/10"
+            >Ver / descargar CV</a
+          >
+        </div>
+
+        <!-- Formulario -->
+        <form
+          action="mailto:ruizjuanmartin46@gmail.com"
+          method="POST"
+          enctype="text/plain"
+          class="max-w-md space-y-3 rounded-2xl border border-white/5 bg-slate-900/70 p-5 text-sm"
+        >
+          <p class="text-slate-200 font-medium text-base">
+            Enviarme un mensaje
+          </p>
+
+          <div class="space-y-1">
+            <label class="text-xs text-slate-400">Nombre</label>
+            <input
+              type="text"
+              name="Nombre"
+              required
+              class="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 focus:border-primary"
+              placeholder="Tu nombre"
+            />
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-xs text-slate-400">Email</label>
+            <input
+              type="email"
+              name="Email"
+              required
+              class="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 focus:border-primary"
+              placeholder="tunombre@ejemplo.com"
+            />
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-xs text-slate-400">Mensaje</label>
+            <textarea
+              name="Mensaje"
+              rows="4"
+              required
+              class="w-full rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 focus:border-primary"
+              placeholder="Contame brevemente qué necesitás…"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="mt-3 rounded-full bg-primary px-4 py-2 font-medium text-white shadow-md hover:bg-indigo-500"
+          >
+            Enviar mensaje
+          </button>
+
+          <p class="text-[11px] text-slate-500">
+            El formulario abre tu cliente de correo con el mensaje
+            prearmado.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="mt-10 border-t border-white/5 bg-slate-950/80 py-4 text-center text-xs text-slate-500"
+    >
+      Hecho por Juan Martín Ruiz · QA Junior (Manual + Cypress) · 2026
+
+    </footer>
+  </body>
+</html>
+
